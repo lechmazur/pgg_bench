@@ -11,6 +11,7 @@ Will LLMs heavily contribute or free-ride? Does punishing deter defection? Or tr
 https://github.com/user-attachments/assets/cd8ec37d-ac16-419a-a103-6d0c8ec80adf
 
 Longer video:
+
 [![Public Goods Game (PGG) Benchmark: Contribute & Punish: Frame-by-frame replay of games](https://markdown-videos-api.jorgenkh.no/youtube/wWiUhhemOLo?width=320&height=180&filetype=jpeg)](https://www.youtube.com/watch?v=wWiUhhemOLo)
 
 ---
