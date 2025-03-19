@@ -162,7 +162,7 @@ We use Microsoft’s [TrueSkill](https://www.microsoft.com/en-us/research/projec
 
 - **Punishment Extremes**: `Gemini 2.0 Flash` devotes ~20% of tokens to punishing, often damaging others heavily—but ends with moderate final tokens itself. Over-punishment can backfire.  
 
-- **Retaliation vs. Passivity**: `Claude 3.5 Sonnet 2024-10-22` hits a 39% retaliation rate, whereas `Llama 3.3 70B` barely retaliates at 2.7%. Retaliators can deter exploitation but risk punishing cycles.  
+- **Retaliation vs. Passivity**: `Claude 3.5 Sonnet 2024-10-22` and `GPT-4.5 Preview` hit a 39% retaliation rate, whereas `Llama 3.3 70B` barely retaliates at 2.7%. Retaliators can deter exploitation but risk punishing tit-for-tat cycles.  
 
 - **Partner Synergy**: Partners of a generous contributor `Claude 3.7 Sonnet` net the most on average.
 
@@ -373,16 +373,16 @@ The endgame effect universally shifts focus to short-term retention in round 10.
 ---
 
 ## Other multi-agent benchmarks
-- [Elimination Game: Social Reasoning and Deception in Multi-Agent LLMs](https://github.com/lechmazur/elimination_game)
-- [Step Race: Collaboration vs. Misdirection Under Pressure](https://github.com/lechmazur/step_game)
+- [Elimination Game: Social Reasoning and Deception in Multi-Agent LLMs](https://github.com/lechmazur/elimination_game/)
+- [Step Race: Collaboration vs. Misdirection Under Pressure](https://github.com/lechmazur/step_game/)
 
 ## Other benchmarks
 - [Extended NYT Connections](https://github.com/lechmazur/nyt-connections/)
-- [LLM Thematic Generalization Benchmark](https://github.com/lechmazur/generalization)
-- [LLM Creative Story-Writing Benchmark](https://github.com/lechmazur/writing)
+- [LLM Thematic Generalization Benchmark](https://github.com/lechmazur/generalization/)
+- [LLM Creative Story-Writing Benchmark](https://github.com/lechmazur/writing/)
 - [LLM Confabulation/Hallucination Benchmark](https://github.com/lechmazur/confabulations/)
 - [LLM Deceptiveness and Gullibility](https://github.com/lechmazur/deception/)
-- [LLM Divergent Thinking Creativity Benchmark](https://github.com/lechmazur/divergent)
+- [LLM Divergent Thinking Creativity Benchmark](https://github.com/lechmazur/divergent/)
 
 ## Updates
 - Follow [@lechmazur](https://x.com/lechmazur) for updates and related benchmarks
