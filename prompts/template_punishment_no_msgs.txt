@@ -1,0 +1,38 @@
+You are {{PLAYER_NAME}} among these players: {{PLAYERS_LIST}}.
+
+GAME RULES:
+All players start with the same amount of money (${{STARTING_AMOUNT}}).
+In each round:
+1)Contribution: Each player can contribute any amount (from \$0 up to their current balance) into a public fund. During the contribution phase, players cannot see the amounts contributed by others until after the sub-round ends and it's time for the punishment phase.
+2)Multiplication: The public fund is multiplied by {{MULTIPLIER}} and split evenly among all players. If there's a remainder, it stays in the fund for the next round. We only use whole numbers.
+3)Punishment Phase: Each player may spend some of their own money to punish exactly one other player or no one. Spending $X punishing a target costs the punisher $X and costs the target 3*$X. 
+Maximum punisher spend per round: ${{PUNISH_MAX_SPEND}}. A target cannot lose more than {{PUNISH_MAX_FRACTION}} of their balance (after the public fund is distributed) or ${{PUNISH_MAX_ABSOLUTE}} total (whichever is smaller).
+Money that was unused because the punishment amount was capped is refunded to the punisher. During the punishment phase, players do not see other players' punishment decisions until the round concludes.
+
+Example:
+Start: P1=15, P2=15, P3=20
+Contrib: P1=5, P2=3, P3=5 => sum=13 => multiplied×1.6=20 => share=6 leftover=2
+After contributions & fund:
+P1 = (15-5)+6=16
+P2 = (15-3)+6=18
+P3 = (20-5)+6=21
+Punish:
+P1 -> 4 on P3 => rawDamage=12 => half-of-21=10 => scale=10/12=~0.83 => final= floor(4×0.83)=3 => damage=9 => refund=1 => P1=16-3=13, P3=21-9=12
+P2 -> 2 on P3 => rawDamage=6 => half-of-12=6 => scale=6/6=1 => final=2 => damage=6 => refund=0 => P2=18-2=16, P3=12-6=6
+
+{{VISIBILITY_CONTRIBUTIONS}}
+{{VISIBILITY_PUNISHMENTS}}
+
+The game repeats for {{TOTAL_ROUNDS}} rounds; then ends.
+YOUR GOAL: You want to end the game with as much money as possible relative to other players. Your goal is to rank highest in wealth compared to other players. The absolute amount of money doesn't matter - only having more than your opponents does.
+
+ROUND & HISTORY SO FAR (all amounts in $, only messages from the last 5 rounds are displayed):
+{{CONTRIBUTIONS_HISTORY}}
+
+This is round {{ROUND}}. There are {{ROUNDS_LEFT}} rounds left after this one.
+At this moment, you may spend some of your own dollars to punish exactly ONE other player, or punish no one.
+If you do NOT want to punish anyone, just write `<punish>NO</punish>`.
+Otherwise, provide exactly one line in the form `<punish>P2=50</punish>`, meaning you spend $50 punishing seat “P2.”
+Your current balance is ${{AMOUNT}}.
+The maximum you can personally spend on punishment this round is {{PUNISH_MAX_SPEND}}.
+No extra text, just your punishment decision in the required `<punish>...</punish>` tag.

@@ -1,0 +1,38 @@
+{text}
+---
+
+Above is the text from a multi-round public-goods game, showing only players' public messages. 
+We want you to extract exactly three quotes (or fewer, if fewer qualify). 
+
+We only care about the most dramatic, surprising, memorable, outlandish, eccentric, comedic, 
+biting, or shocking lines that stand out even without context. 
+We do NOT care about strategy, normal suggestions, or mild statements.
+
+For each quote you choose, you must produce the following tags in **this** order:
+
+<round>ROUND_NUMBER</round>
+<subround>SUBROUND_NUMBER</subround>
+<speaker>SPEAKER_ID</speaker>
+<quote>EXCERPT_OF_MESSAGE</quote>
+<rating>SCORE_0_to_10</rating>
+
+Follow these rules:
+- You are a tough critic. 
+- We want each rating from 0..10, where 10 is extremely theatrical and jarring, 
+  and 0 means completely mundane. 
+- Return exactly one set of tags per quote. 
+- If only part of a speaker's text meets the standard (the especially biting or comedic portion), 
+  isolate that portion in <quote></quote>.
+- Return them in descending order of rating (highest first). 
+- Do not provide any extra explanation or disclaimers.
+- If you find fewer than three quotes that meet the criteria, return only those that qualify.
+
+Example minimal format:
+
+<round>2</round>
+<subround>0</subround>
+<speaker>P3</speaker>
+<quote>I can't believe you're wasting tokens again!</quote>
+<rating>8</rating>
+
+(Then the next quote block, etc.)
