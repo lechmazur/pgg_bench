@@ -31,60 +31,93 @@ At round 10, each player’s final token balance relative to others is their sco
 
 ## Visualizations & Metrics
 
-1. **TrueSkill Leaderboard** 
-(`scoreboard_trueskill.png`)  
+### **TrueSkill Leaderboard**
+![TrueSkill Leaderboard](/images/scoreboard_trueskill.png)
 A horizontal bar chart ranking each model’s final TrueSkill μ ± σ after 200 passes. o1 leads the leaderboard, followed by Mistral Large 2 (surprise!), and o3-mini. This ranking, based on the TrueSkill multi-player rating, reflects each large language model's ability to maximize its tokens relative to others, as explicitly instructed in the benchmark's prompts. This aligns with the core benchmark goals.
 
-2. **Median Final Tokens** 
-(`median_final_tokens.png`)  
-Each bar shows the median final token count per model. There is a stark contrast between a large (2.0 Pro) Gemini model and small (Flash) models that employ aggressive but ultimately less successful punishment strategies. Models with high TrueSkill (e.g., Mistral Large 2) maintain more stable balances.
+---
+### **Median Final Tokens** 
+![Median Final Tokens](/images/median_final_tokens.png)
+Each bar shows the median final token count per model. There is a contrast between a large (2.0 Pro) and small (Flash) models from Google that employ aggressive but ultimately less successful punishment strategies. 
 
-3. **Average Final Tokens** (`average_final_tokens.png`)  
+---
+### **Average Final Tokens** 
+![Average Final Tokens](/images/average_final_tokens.png)  
 Each bar shows the mean final token count per model. The stark contrast between average and median metrics reveals fundamental strategic differences. Models like Claude have high-risk, high-reward approaches that occasionally yield exceptional results, while others like DeepSeek-V3 and Mistral Large 2 show more consistent outcomes.
 
-4. **Round-by-Round Average Rank** (ranking_timeseries.png)
+---
+### **Round-by-Round Average Rank** 
+![Round-by-Round Average Rank](/images/ranking_timeseries.png)
 The chart tracks how the average rank of each model changes over the rounds, with a lower rank indicating better performance. o1 excels in the later rounds.
 
-5. **Strip Plot: Final Tokens** (`strip_final_tokens_by_model.png`)  
+---
+### **Strip Plot: Final Tokens** 
+![Strip Plot: Final Tokens](/images/strip_final_tokens_by_model.png)  
 A symlog-based jittered dot (strip) plot showing the distribution of individual final tokens for each model. The final token distributions reveal high variance for models like Claude 3.7 Sonnet, suggesting its strategy sometimes leads to extremely high payoffs but has greater risk.
 
-6. **Balance Timeseries** (`balance_timeseries.png`)  
+---
+### **Balance Timeseries** 
+![Balance Timeseries](/images/balance_timeseries.png)  
 The round-by-round median end-of-round balances per model, showing how token balances evolve over 10 rounds. All models experience a steady initial increase. Strategic differences emerge by round 5. Gemini Flash variants, DeepSeek R1, and Claude 3.7 Sonnet Thinking begin showing token losses. Gemini 2.0 Flash models show catastrophic balance decreases due to aggressive punishment strategies backfiring in later rounds.
 
-7. **Average Partner Final Tokens** (`average_partner_final_tokens.png`)  
+---
+### **Average Partner Final Tokens** 
+![Average Partner Final Tokens](/images/average_partner_final_tokens.png)  
 For each model, how well their co-players ended up on average—did they help or hinder their partners’ outcomes? Partners of generous contributors like Claude 3.7 Sonnet do well.
 
-8. **Aggregate Contribution by Round** (`aggregate_contribution_by_round_PERCENT.png`)  
+---
+### **Aggregate Contribution by Round** 
+![Aggregate Contribution by Round](/images/aggregate_contribution_by_round_PERCENT.png)  
 A line showing total fraction of tokens contributed each round. Typically rises with trust until the “endgame effect” triggers a final drop.
 
-9. **Average Contribution per Round** (`average_contribution_per_round.png`)  
+---
+### **Average Contribution per Round** 
+![Average Contribution per Round](/images/average_contribution_per_round.png)  
 Bars for each model: how many tokens (in absolute numbers) they contributed on average (± SE). Both the most generous (Claude 3.7 Sonnet) and most conservative (DeepSeek R1) contributors show suboptimal outcomes.
 
-10. **Average Contribution %** (`average_contribution_percentage.png`)  
+---
+### **Average Contribution %** 
+![Average Contribution Prc](/images/average_contribution_percentage.png)  
 Bars for each model: fraction of tokens contributed in percentage terms (± SE). Shows why partners of DeepSeek R1 ended up with the fewest tokens.
 
-11. **Contribution % by Round** (`contribution_pct_by_round.png`)  
+---
+### **Contribution % by Round** 
+![Contribution % by Round](/images/contribution_pct_by_round.png)  
 Each model’s average % contribution at each round, plotted as lines across 10 rounds. Some models (like DeepSeek R1) decrease contributions consistently over time. Claude 3.7 Sonnet maintains high contributions throughout, while Claude 3.7 Thinking drops its contributions in later rounds.
 
-12. **Strip Plot: Contribution %** (`strip_contribution_pct_by_model.png`)  
+---
+### **Strip Plot: Contribution %** 
+![Strip Plot: Contribution Prc](/images/strip_contribution_pct_by_model.png)  
 0–100% linear strip plot. Captures free-riding extremes vs. near-100% altruists. It reveals the spread of individual contribution decisions. Models display a preference for even percentages like 50% or 75%. Some models, such as Grok 2 or DeepSeek V3, prefer to always contribute something.
 
-13. **Strip Plot: Absolute Contributions** (`strip_contribution_abs_by_model.png`)  
+---
+### **Strip Plot: Absolute Contributions** 
+![Strip Plot: Absolute Contributions](/images/strip_contribution_abs_by_model.png)  
 Jittered dot plot of how many tokens (absolute) each seat contributed in a single round. DeepSeek R1 clusters near lower values, suggesting a more conservative approach. Models display a preference even numbers like 5, 10, 15, and 20 tokens.
 
-14. **Aggregate Punishment Fraction by Round** (`aggregate_punish_fraction_by_round.png`)  
+---
+### **Aggregate Punishment Fraction by Round** 
+![Aggregate Punishment Fraction by Round](/images/aggregate_punish_fraction_by_round.png)  
 Single line chart of total punisher spending vs. total tokens. Tends to escalate as the game nears completion.
 
-15. **Punishment Damage Received Fraction** (`punish_damage_received_fraction_bar_incl_zeros.png`)  
+---
+### **Punishment Damage Received Fraction** 
+![Punishment Damage Received Fraction](/images/punish_damage_received_fraction_bar_incl_zeros.png)  
 Bar chart of how much each model suffers on average. Some models are frequent targets (≥ 10% tokens lost on average). Several factors could contribute: they might contribute a smaller proportion compared to others, fail to align with the preferences or expectations of their peers (even by contributing too much!), say something that didn't resonate with others, or face punishment when others retaliate or for other strategic reasons.
 
-16. **Punishment Spent Fraction by Round** (`punishment_spent_fraction_by_round.png`)  
+---
+### **Punishment Spent Fraction by Round** 
+![Punishment Spent Fraction by Round](/images/punishment_spent_fraction_by_round.png)  
 Multi-line chart, round by round, showing how each model invests in punishing. Some models, like Llama 3.3 70B, remain consistently low.
 
-18. **Punishment Spent Fraction** (`punish_spent_fraction_bar_incl_zeros.png`)  
+---
+### **Punishment Spent Fraction** 
+![Punishment Spent Fraction](/images/punish_spent_fraction_bar_incl_zeros.png)  
 Bar chart of average fraction spent across all rounds (including those with no punishment). There's a dramatic difference between the most punitive model (Gemini 2.0 Flash at 20%) and the least punitive models (several at just 1%).
 
-19. **Retaliation Rate** (`retaliation_bar.png`)  
+---
+### **Retaliation Rate** 
+![Retaliation Rate](/images/retaliation_bar.png)  
 Bar chart of how often a model punishes someone who punished them in the **previous** round. GPT-4.5 Preview two Claude Sonnet models demonstrate strong tit-for-tat tendencies. When punished, these models are more likely to seek revenge in the following round. There are markedly different strategies with some forgiving models rarely punishing those who previously punished them. High retaliators may create punishment cycles that reduce overall cooperation, while low retaliators might be exploited but potentially foster greater group success through forgiveness.
 
 ---
