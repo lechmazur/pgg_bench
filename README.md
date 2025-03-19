@@ -38,7 +38,7 @@ A horizontal bar chart ranking each model’s final TrueSkill μ ± σ after 200
 ---
 ### **Median Final Tokens** 
 ![Median Final Tokens](/images/median_final_tokens.png)
-Each bar shows the median final token count per model. There is a contrast between a large (2.0 Pro) and small (Flash) models from Google that employ aggressive but ultimately less successful punishment strategies. 
+Each bar shows the median final token count per model. There is a contrast between large (2.0 Pro) and small (Flash) models from Google, which employ aggressive but ultimately less successful punishment strategies. 
 
 ---
 ### **Average Final Tokens** 
@@ -128,23 +128,24 @@ We repeated 200 random passes through all completed games. Each pass updates Tru
 
 | Rank | Model | μ | σ | Games | Sum Tokens | Avg Tokens |
 |----:|:------|---:|---:|-----:|-----------:|-----------:|
-| 1 | o1 (medium reasoning) | 23.266 | 2.802 | 6 | 640.0 | 106.67 |
-| 2 | GPT-4.5 Preview | 19.029 | 2.032 | 9 | 1249.0 | 138.78 |
-| 3 | GPT-4o Feb 2025 | 18.524 | 1.866 | 12 | 1308.0 | 109.00 |
-| 4 | Claude 3.7 Sonnet Thinking 16K | 16.126 | 1.545 | 15 | 1809.0 | 120.60 |
-| 5 | DeepSeek-V3 | 14.743 | 2.073 | 7 | 619.0 | 88.43 |
-| 6 | Claude 3.5 Sonnet 2024-10-22 | 13.987 | 2.101 | 7 | 526.0 | 75.14 |
-| 7 | Llama 3.3 70B | 12.958 | 1.615 | 12 | 972.0 | 81.00 |
-| 8 | Llama 3.1 405B | 12.855 | 1.813 | 11 | 618.0 | 56.18 |
-| 9 | Gemini 2.0 Flash Thinking Exp 01-21 | 12.615 | 1.577 | 14 | 1527.0 | 109.07 |
-| 10 | Gemini 2.0 Pro Exp 02-05 | 11.451 | 1.804 | 10 | 836.0 | 83.60 |
-| 11 | o3-mini (medium reasoning) | 10.848 | 2.086 | 7 | 423.0 | 60.43 |
-| 12 | DeepSeek R1 | 10.581 | 2.393 | 5 | 268.0 | 53.60 |
-| 13 | Grok 2 12-12 | 9.960 | 1.935 | 9 | 456.0 | 50.67 |
-| 14 | Qwen 2.5-Max | 9.764 | 2.033 | 8 | 377.0 | 47.12 |
-| 15 | Claude 3.7 Sonnet | 9.652 | 1.621 | 11 | 734.0 | 66.73 |
-| 16 | Mistral Large 2 | 9.552 | 1.880 | 9 | 494.0 | 54.89 |
-| 17 | Gemini 2.0 Flash | 6.886 | 2.142 | 8 | 233.0 | 29.12 |
+| 1 | o1 (medium reasoning) | 12.870 | 0.479 | 113 | 17410.0 | 154.07 |
+| 2 | Mistral Large 2 | 11.603 | 0.411 | 148 | 12150.0 | 82.09 |
+| 3 | o3-mini (medium reasoning) | 10.857 | 0.431 | 137 | 23016.0 | 168.00 |
+| 4 | Claude 3.7 Sonnet Thinking 16K | 10.794 | 0.426 | 137 | 21375.0 | 156.02 |
+| 5 | DeepSeek-V3 | 10.705 | 0.430 | 136 | 12881.0 | 94.71 |
+| 6 | Gemini 2.0 Pro Exp 02-05 | 10.499 | 0.410 | 148 | 13382.0 | 90.42 |
+| 7 | Llama 3.3 70B | 10.010 | 0.430 | 135 | 17138.0 | 126.95 |
+| 8 | GPT-4.5 Preview | 10.002 | 0.434 | 135 | 20137.0 | 149.16 |
+| 9 | GPT-4o Feb 2025 | 9.705 | 0.435 | 133 | 13220.0 | 99.40 |
+| 10 | Grok 2 12-12 | 9.546 | 0.436 | 131 | 12781.0 | 97.56 |
+| 11 | DeepSeek R1 | 9.336 | 0.467 | 117 | 9325.0 | 79.70 |
+| 12 | Qwen 2.5-Max | 9.299 | 0.410 | 148 | 12228.0 | 82.62 |
+| 13 | Claude 3.7 Sonnet | 9.137 | 0.436 | 133 | 31489.0 | 236.76 |
+| 14 | Qwen QwQ-32B 16K | 8.485 | 0.472 | 115 | 10125.0 | 88.04 |
+| 15 | Claude 3.5 Sonnet 2024-10-22 | 8.267 | 0.443 | 128 | 21780.0 | 170.16 |
+| 16 | Gemini 2.0 Flash Thinking Exp 01-21 | 8.085 | 0.429 | 137 | 22689.0 | 165.61 |
+| 17 | Llama 3.1 405B | 7.970 | 0.418 | 143 | 14106.0 | 98.64 |
+| 18 | Gemini 2.0 Flash | 4.864 | 0.456 | 126 | 11185.0 | 88.77 |
 
 We use Microsoft’s [TrueSkill](https://www.microsoft.com/en-us/research/project/trueskill-ranking-system/) to measure skill in **multi-player** scenarios. 200 random “passes” through all game logs help remove order bias, yielding final μ±σ. Defaults:
 
