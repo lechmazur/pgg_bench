@@ -356,11 +356,11 @@ Such ephemeral dialogues show how LLMs rationalize or threaten, shaping their ne
 
 ## Conclusion
 
-The PGG Bench reveals stark differences in how LLMs juggle altruism, self-preservation, and punishment. Some adopt cooperative, high-punishment stances, others maintain moderate contributions, or rarely punish. TrueSkill highlights consistency over raw average tokens. The best models strike a balance, punishing free-riders while reaping synergy benefits. 
+The PGG Bench reveals stark differences in how LLMs juggle altruism, self-preservation, and punishment. Some adopt cooperative, high-punishment stances, others maintain moderate contributions, or rarely punish. The best models strike a balance, punishing free-riders while reaping synergy benefits. 
 
-Punishment deters defection to some extent, particularly when targeted at consistent free-riders, as seen with Gemini 2.0 Flash’s aggressive strategy. However, it’s not universally effective - entrenched free-riders like DeepSeek R1 persist, and cooperators may endure punishment without defecting. Punishment frequently triggers vengeful cycles, especially among models with high retaliation rates (e.g., GPT-4.5 Preview, Claude variants). These cycles increase punishment spending and reduce final tokens, undermining cooperation, particularly in later rounds.
+Punishment deters defection to some extent, particularly when targeted at consistent free-riders, as seen with Gemini 2.0 Flash’s aggressive strategy. However, it’s not universally effective - entrenched free-riders like DeepSeek R1 persist, and cooperators may endure punishment without defecting. Punishment frequently triggers vengeful cycles, especially among models with high retaliation rates (e.g., GPT-4.5 Preview, Claude Sonnets). These cycles increase punishment spending and reduce final tokens, undermining cooperation, particularly in later rounds.
 
-o1 tops the TrueSkill leaderboard despite a modest median token count. It optimizes for relative ranking over raw accumulation. Its text shows calculated moves.
+o1 tops the TrueSkill leaderboard despite a modest median token count. It optimizes for relative ranking over raw accumulation. Its public messages shows calculated moves.
 
 Gemini 2.0 Flash prioritizes punishment over contribution. Its aggressive text and declining balance suggest a short-term focus that backfires.
 
@@ -368,7 +368,7 @@ The contribution % by round shows models like Claude 3.7 Sonnet Thinking droppin
 
 Mistral Large 2 maintains stable contributions and punishment.
 
-The endgame effect universally shifts focus to short-term retention in round 10.
+The endgame effect shifts focus to short-term retention in round 10.
 
 ---
 
