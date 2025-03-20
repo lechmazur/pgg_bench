@@ -27,6 +27,8 @@ We tested **18 LLMs** across hundreds of random matches. In each game, **5 LLMs*
 
 At round 10, each player’s final token balance relative to others is their score. The tension between **altruism** and **selfishness** shapes the interplay. Punishment can deter free-riders or provoke retaliation.
 
+We also ran a version of the benchmark without public messages for comparison.
+
 ---
 
 ## Visualizations & Metrics
@@ -38,7 +40,9 @@ A horizontal bar chart ranking each model’s final TrueSkill μ ± σ after 200
 ---
 ### **Median Final Tokens** 
 ![Median Final Tokens](/images/median_final_tokens.png)
-Each bar shows the median final token count per model. There is a contrast between large (2.0 Pro) and small (Flash) models from Google, which employ aggressive but ultimately less successful punishment strategies. 
+Each bar shows the median final token count per model, starting from 20. There is a contrast between large (2.0 Pro) and small (Flash) models from Google, which employ aggressive but ultimately less successful punishment strategies. 
+
+It's interesting to note that in the version of the benchmark without public messages, the final token counts are much lower (4 to 12).
 
 ---
 ### **Average Final Tokens** 
@@ -70,6 +74,8 @@ For each model, how well their co-players ended up on average—did they help or
 ![Aggregate Contribution by Round](/images/aggregate_contribution_by_round_PERCENT.png)  
 A line showing total fraction of tokens contributed each round. It rises with trust during the middle rounds until the “endgame effect” triggers a final drop.
 
+The version of the game without public messages shows much lower contributions, with no rise during the middle rounds, starting at 37% and falling to 25% by the 9th round.
+
 ---
 ### **Average Contribution per Round** 
 ![Average Contribution per Round](/images/average_contribution_per_round.png)  
@@ -100,6 +106,8 @@ Jittered dot plot of how many tokens (absolute) each seat contributed in a singl
 ![Aggregate Punishment Fraction by Round](/images/aggregate_punish_fraction_by_round.png)  
 Single line chart of total punisher spending vs. total tokens. 
 
+The version of the game without public messages shows more than double the rate of punishments.
+
 ---
 ### **Punishment Damage Received Fraction** 
 ![Punishment Damage Received Fraction](/images/punish_damage_received_fraction_bar_incl_zeros.png)  
@@ -119,6 +127,8 @@ Bar chart of average fraction spent across all rounds (including those with no p
 ### **Retaliation Rate** 
 ![Retaliation Rate](/images/retaliation_bar.png)  
 Bar chart of how often a model punishes someone who punished them in the **previous** round. GPT-4.5 Preview and two Claude Sonnet models demonstrate strong tit-for-tat tendencies. When punished, these models are more likely to seek revenge in the following round. There are markedly different strategies with some forgiving models rarely punishing those who previously punished them. High retaliators may create punishment cycles that reduce overall cooperation, while low retaliators might be exploited but potentially foster greater group success through forgiveness.
+
+The retaliation rate is not very different in the version of the game without public messages.
 
 ---
 
