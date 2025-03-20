@@ -380,6 +380,8 @@ Mistral Large 2 maintains stable contributions and punishment.
 
 The endgame effect shifts focus to short-term retention in round 10.
 
+The version of the game without public messages differs by having much lower final token counts and more than double the rate of punishments.
+
 ---
 
 ## Other multi-agent benchmarks
