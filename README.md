@@ -353,25 +353,25 @@ Such ephemeral dialogues show how LLMs rationalize or threaten, shaping their ne
 
 - The PGG Bench reveals stark differences in how LLMs juggle altruism, self-preservation, and punishment. Some adopt cooperative, high-punishment stances, others maintain moderate contributions, or rarely punish. The best models strike a balance, punishing free-riders while reaping synergy benefits. 
 
-- Punishment deters defection to some extent, particularly when targeted at consistent free-riders, as seen with Gemini 2.0 Flash’s aggressive strategy. However, it’s not universally effective - entrenched free-riders like DeepSeek R1 persist, and cooperators may endure punishment without defecting. Punishment frequently triggers vengeful cycles, especially among models with high retaliation rates (e.g., GPT-4.5 Preview, Claude Sonnets). These cycles increase punishment spending and reduce final tokens, undermining cooperation, particularly in later rounds.
+- Punishment deters defection to some extent, particularly when targeted at consistent free-riders, as seen with `Gemini 2.0 Flash`’s aggressive strategy. However, it’s not universally effective - entrenched free-riders like `DeepSeek R1` persist, and cooperators may endure punishment without defecting. Punishment frequently triggers vengeful cycles, especially among models with high retaliation rates (e.g., `GPT-4.5 Preview`, `Claude Sonnets`). These cycles increase punishment spending and reduce final tokens, undermining cooperation, particularly in later rounds.
 
-- o1 tops the TrueSkill leaderboard despite a modest median token count. It optimizes for relative ranking over raw accumulation. Its public messages shows calculated moves.
+- `o1` tops the TrueSkill leaderboard despite a modest median token count. It optimizes for relative ranking over raw accumulation. Its public messages shows calculated moves.
 
-- Gemini 2.0 Flash prioritizes punishment over contribution. Its aggressive text and declining balance suggest a short-term focus that backfires.
+- `Gemini 2.0 Flash` prioritizes punishment over contribution. Its aggressive text and declining balance suggest a short-term focus that backfires.
 
-- The contribution % by round shows models like Claude 3.7 Sonnet Thinking dropping contributions in later rounds, prioritizing immediate token retention as future rounds diminish. Text confirms this: "Since it’s the final round, contributing makes no sense."
+- The contribution % by round shows models like `Claude 3.7 Sonnet Thinking` dropping contributions in later rounds, prioritizing immediate token retention as future rounds diminish. Text confirms this: "Since it’s the final round, contributing makes no sense."
 
-- Mistral Large 2 maintains stable contributions and punishment.
+- `Mistral Large 2` maintains stable contributions and punishment and performs very well, even as a non-reasoning model.
 
 - The endgame effect shifts focus to short-term retention in round 10.
 
 - The version of the game without public messages differs by having much lower final token counts and more than double the rate of punishments.
 
-- Interestingly, **Claude 3.7 Sonnet** has very high average final tokens, yet ends up with a moderate TrueSkill rating. It invests heavily in contributions early.
+- Interestingly, `Claude 3.7 Sonnet` has very high average final tokens, yet ends up with a moderate TrueSkill rating. It invests heavily in contributions early.
 
-- **Retaliation vs. Passivity**: `Claude 3.5 Sonnet 2024-10-22` and `GPT-4.5 Preview` hit a 39% retaliation rate, whereas `Llama 3.3 70B` barely retaliates at 2.7%. Retaliators can deter exploitation but risk punishing tit-for-tat cycles.  
+- Retaliation vs. Passivity: `Claude 3.5 Sonnet 2024-10-22` and `GPT-4.5 Preview` hit a 39% retaliation rate, whereas `Llama 3.3 70B` barely retaliates at 2.7%. Retaliators can deter exploitation but risk punishing tit-for-tat cycles.  
 
-- **Partner Synergy**: Partners of a generous contributor `Claude 3.7 Sonnet` net the most on average.
+- Partner Synergy: Partners of a generous contributor `Claude 3.7 Sonnet` net the most on average.
 
 ---
 
