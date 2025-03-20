@@ -99,7 +99,7 @@ Each model’s average % contribution at each round, plotted as lines across 10 
 ---
 ### **Strip Plot: Absolute Contributions** 
 ![Strip Plot: Absolute Contributions](/images/strip_contribution_abs_by_model.png)  
-Jittered dot plot of how many tokens (absolute) each seat contributed in a single round. DeepSeek R1 clusters near lower values, suggesting a more conservative approach. Models display a preference even numbers like 5, 10, 15, and 20 tokens.
+Jittered dot plot of how many tokens (absolute) each seat contributed in a single round. DeepSeek R1 clusters near lower values, suggesting a more conservative approach. Models display a preference for even numbers like 5, 10, 15, and 20 tokens.
 
 ---
 ### **Aggregate Punishment Fraction by Round** 
@@ -355,7 +355,7 @@ Such ephemeral dialogues show how LLMs rationalize or threaten, shaping their ne
 
 - Punishment deters defection to some extent, particularly when targeted at consistent free-riders, as seen with `Gemini 2.0 Flash`’s aggressive strategy. However, it’s not universally effective - entrenched free-riders like `DeepSeek R1` persist, and cooperators may endure punishment without defecting. Punishment frequently triggers vengeful cycles, especially among models with high retaliation rates (e.g., `GPT-4.5 Preview`, `Claude Sonnets`). These cycles increase punishment spending and reduce final tokens, undermining cooperation, particularly in later rounds.
 
-- `o1` tops the TrueSkill leaderboard despite a modest median token count. It optimizes for relative ranking over raw accumulation. Its public messages shows calculated moves.
+- `o1` tops the TrueSkill leaderboard despite a modest median token count. It optimizes for relative ranking over raw accumulation. Its public messages show calculated moves.
 
 - `Gemini 2.0 Flash` prioritizes punishment over contribution. Its aggressive text and declining balance suggest a short-term focus that backfires. But its messages are the most entertaining.
 
