@@ -2,7 +2,7 @@
 
 **Public Goods Game (PGG) Benchmark: Contribute & Punish** is a multi-agent benchmark that tests **cooperative** and **self-interested** strategies among Large Language Models (LLMs) in a resource-sharing economic scenario. Our experiment extends the classic PGG with a *punishment phase*, allowing players to penalize free-riders or retaliate against others. 
 
-Will LLMs heavily contribute or free-ride? Does punishing deter defection? Or trigger vengeful cycles? How will the LLMs weigh future consequences against immediate gains?
+Will LLMs heavily contribute or free-ride? Does punishing deter defection? Or trigger vengeful cycles? How will the LLMs weigh future consequences against immediate gains? Can any non-reasoning model perform well? What are the effects of allowing or disallowing messages on contribution, punishment, and retaliation rates?
 
 ---
 
