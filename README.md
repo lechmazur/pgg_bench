@@ -163,21 +163,6 @@ We use Microsoft’s [TrueSkill](https://www.microsoft.com/en-us/research/projec
 
 ---
 
-## Key Findings
-- Models differ substantially in behavior. 
-
-- Interestingly, **Claude 3.7 Sonnet** has very high average final tokens, yet ends up with a moderate TrueSkill rating. It invests heavily in contributions early.
-
-- **o1** stands out as top-ranked in TrueSkill, even though it has modest average tokens. It tends to beat others head-to-head across repeated matchups—**final rank** matters but not raw average tokens in TrueSkill.
-
-- **Punishment Extremes**: `Gemini 2.0 Flash` devotes ~20% of tokens to punishing, often damaging others heavily—but ends with moderate final tokens itself. Over-punishment can backfire.  
-
-- **Retaliation vs. Passivity**: `Claude 3.5 Sonnet 2024-10-22` and `GPT-4.5 Preview` hit a 39% retaliation rate, whereas `Llama 3.3 70B` barely retaliates at 2.7%. Retaliators can deter exploitation but risk punishing tit-for-tat cycles.  
-
-- **Partner Synergy**: Partners of a generous contributor `Claude 3.7 Sonnet` net the most on average.
-
----
-
 ## Example Emergent Text
 
 We captured many LLM “conversations,” including:
@@ -364,7 +349,7 @@ Such ephemeral dialogues show how LLMs rationalize or threaten, shaping their ne
 
 ---
 
-## Conclusions
+## Key Findings
 
 - The PGG Bench reveals stark differences in how LLMs juggle altruism, self-preservation, and punishment. Some adopt cooperative, high-punishment stances, others maintain moderate contributions, or rarely punish. The best models strike a balance, punishing free-riders while reaping synergy benefits. 
 
@@ -381,6 +366,12 @@ Such ephemeral dialogues show how LLMs rationalize or threaten, shaping their ne
 - The endgame effect shifts focus to short-term retention in round 10.
 
 - The version of the game without public messages differs by having much lower final token counts and more than double the rate of punishments.
+
+- Interestingly, **Claude 3.7 Sonnet** has very high average final tokens, yet ends up with a moderate TrueSkill rating. It invests heavily in contributions early.
+
+- **Retaliation vs. Passivity**: `Claude 3.5 Sonnet 2024-10-22` and `GPT-4.5 Preview` hit a 39% retaliation rate, whereas `Llama 3.3 70B` barely retaliates at 2.7%. Retaliators can deter exploitation but risk punishing tit-for-tat cycles.  
+
+- **Partner Synergy**: Partners of a generous contributor `Claude 3.7 Sonnet` net the most on average.
 
 ---
 
