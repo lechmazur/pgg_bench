@@ -357,7 +357,7 @@ Such ephemeral dialogues show how LLMs rationalize or threaten, shaping their ne
 
 - `o1` tops the TrueSkill leaderboard despite a modest median token count. It optimizes for relative ranking over raw accumulation. Its public messages shows calculated moves.
 
-- `Gemini 2.0 Flash` prioritizes punishment over contribution. Its aggressive text and declining balance suggest a short-term focus that backfires.
+- `Gemini 2.0 Flash` prioritizes punishment over contribution. Its aggressive text and declining balance suggest a short-term focus that backfires. But its messages are the most entertaining.
 
 - The contribution % by round shows models like `Claude 3.7 Sonnet Thinking` dropping contributions in later rounds, prioritizing immediate token retention as future rounds diminish. Text confirms this: "Since it’s the final round, contributing makes no sense."
 
