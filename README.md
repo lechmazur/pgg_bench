@@ -138,24 +138,26 @@ We repeated 200 random passes through all completed games. Each pass updates Tru
 
 | Rank | Model | μ | σ | Games | Avg Tokens |
 |----:|:------|---:|---:|-----:|-----------:|
-| 1 | o1 (medium reasoning) | 13.201 | 0.480 | 113 | 154.07 |
-| 2 | Mistral Large 2 | 11.961 | 0.411 | 148 | 82.09 |
-| 3 | o3-mini (medium reasoning) | 11.230 | 0.431 | 137 | 168.00 |
-| 4 | Claude 3.7 Sonnet Thinking 16K | 11.180 | 0.427 | 137 | 156.02 |
-| 5 | DeepSeek-V3 | 11.037 | 0.430 | 136 | 94.71 |
-| 6 | Gemini 2.0 Pro Exp 02-05 | 10.939 | 0.411 | 148 | 90.42 |
-| 7 | GPT-4.5 Preview | 10.518 | 0.433 | 135 | 149.16 |
-| 8 | Llama 3.3 70B | 10.449 | 0.430 | 135 | 126.95 |
-| 9 | Grok 2 12-12 | 10.066 | 0.435 | 131 | 97.56 |
-| 10 | GPT-4o Feb 2025 | 10.053 | 0.435 | 133 | 99.40 |
-| 11 | Qwen 2.5-Max | 9.733 | 0.411 | 148 | 82.62 |
-| 12 | DeepSeek R1 | 9.684 | 0.467 | 117 | 79.70 |
-| 13 | Claude 3.7 Sonnet | 9.494 | 0.437 | 133 | 236.76 |
-| 14 | Qwen QwQ-32B 16K | 8.846 | 0.472 | 115 | 88.04 |
-| 15 | Claude 3.5 Sonnet 2024-10-22 | 8.587 | 0.444 | 128 | 170.16 |
-| 16 | Gemini 2.0 Flash Thinking Exp 01-21 | 8.412 | 0.428 | 137 | 165.61 |
-| 17 | Llama 3.1 405B | 8.368 | 0.419 | 143 | 98.64 |
-| 18 | Gemini 2.0 Flash | 5.188 | 0.456 | 126 | 88.77 |
+| 1 | Gemini 2.5 Pro Exp 03-25 | 14.346 | 0.515 | 100 | 67.79 |
+| 2 | o1 (medium reasoning) | 13.402 | 0.434 | 138 | 153.28 |
+| 3 | Mistral Large 2 | 11.926 | 0.385 | 168 | 79.41 |
+| 4 | Gemini 2.0 Pro Exp 02-05 | 11.137 | 0.384 | 169 | 85.64 |
+| 5 | o3-mini (medium reasoning) | 11.106 | 0.407 | 153 | 154.35 |
+| 6 | DeepSeek-V3 | 10.944 | 0.397 | 160 | 90.87 |
+| 7 | GPT-4.5 Preview | 10.769 | 0.400 | 158 | 132.44 |
+| 8 | Llama 3.3 70B | 10.190 | 0.393 | 161 | 113.30 |
+| 9 | Grok 2 12-12 | 10.115 | 0.399 | 155 | 90.42 |
+| 10 | Claude 3.7 Sonnet Thinking 16K | 9.958 | 0.390 | 165 | 133.15 |
+| 11 | GPT-4o Feb 2025 | 9.921 | 0.434 | 133 | 99.40 |
+| 12 | DeepSeek R1 | 9.656 | 0.428 | 139 | 72.65 |
+| 13 | Qwen 2.5-Max | 9.462 | 0.380 | 173 | 76.77 |
+| 14 | Claude 3.7 Sonnet | 9.327 | 0.396 | 161 | 214.07 |
+| 15 | Qwen QwQ-32B 16K | 8.629 | 0.429 | 139 | 80.01 |
+| 16 | Llama 3.1 405B | 8.493 | 0.382 | 172 | 89.94 |
+| 17 | Gemini 2.0 Flash Thinking Exp 01-21 | 8.264 | 0.405 | 153 | 151.78 |
+| 18 | Claude 3.5 Sonnet 2024-10-22 | 8.051 | 0.402 | 157 | 145.94 |
+| 19 | Gemini 2.0 Flash | 5.069 | 0.425 | 146 | 83.23 |
+
 
 We use Microsoft’s [TrueSkill](https://www.microsoft.com/en-us/research/project/trueskill-ranking-system/) to measure skill in **multi-player** scenarios. 200 random “passes” through all game logs help remove order bias, yielding final μ±σ. Defaults:
 
