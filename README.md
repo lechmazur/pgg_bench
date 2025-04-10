@@ -390,4 +390,5 @@ Such ephemeral dialogues show how LLMs rationalize or threaten, shaping their ne
 - [LLM Divergent Thinking Creativity Benchmark](https://github.com/lechmazur/divergent/)
 
 ## Updates
+- April 10, 2025: Llama 4, DeepSeek V3-0324, GPT-4o March 2025 added.
 - Follow [@lechmazur](https://x.com/lechmazur) for updates and related benchmarks
